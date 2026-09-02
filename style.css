@@ -82,7 +82,7 @@ body {
 }
 
 /* Phone layout */
-@media (max-width: 600px) {
+@media (max-width: 597px) {
 
     .clock-container {
         width: 90%;
@@ -127,7 +127,7 @@ body {
    DESKTOP / WEB VERSION
    ========================= */
 
-@media (min-width: 601px) {
+@media (min-width: 598px) {
 
     body {
         background:
