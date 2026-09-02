@@ -1,3 +1,7 @@
+/* ========================================
+   LIVE CLOCK - MAIN STYLES
+   ======================================== */
+
 * {
     box-sizing: border-box;
 }
@@ -17,6 +21,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+
     font-family: Arial, sans-serif;
     color: white;
 
@@ -29,43 +34,60 @@ body {
         );
 }
 
-/* Main clock card */
+
+/* ========================================
+   CLOCK CARD
+   ======================================== */
+
 .clock-container {
-    width: min(90%, 600px);
+    width: 700px;
+    max-width: 85%;
+
     text-align: center;
 
     background: rgba(255, 255, 255, 0.055);
 
     border: 1px solid rgba(255, 255, 255, 0.14);
-    border-radius: 24px;
+    border-radius: 26px;
 
-    padding: 40px 60px;
+    padding: 50px 50px;
 
     box-shadow:
-        0 20px 60px rgba(0, 0, 0, 0.45),
-        0 0 40px rgba(83, 141, 78, 0.12),
+        0 25px 70px rgba(0, 0, 0, 0.5),
+        0 0 60px rgba(83, 141, 78, 0.15),
         inset 0 1px 0 rgba(255, 255, 255, 0.08);
 
     backdrop-filter: blur(14px);
     -webkit-backdrop-filter: blur(14px);
 
-    /* Compensate for the iPhone status-bar issue */
-    transform: translateY(-25px);
+    transform: translateY(-10px);
 }
 
-/* "CURRENT TIME" */
+
+/* ========================================
+   TITLE
+   ======================================== */
+
 .title {
-    font-size: 16px;
-    letter-spacing: 5px;
+    font-size: 18px;
+    letter-spacing: 7px;
+
     color: #888;
-    margin-bottom: 15px;
+
+    margin-bottom: 20px;
 }
 
-/* Time */
+
+/* ========================================
+   CLOCK
+   ======================================== */
+
 #clock {
-    font-size: 80px;
+    font-size: 82px;
     font-weight: bold;
-    letter-spacing: 4px;
+
+    letter-spacing: 5px;
+
     color: #ffffff;
 
     text-shadow:
@@ -73,22 +95,44 @@ body {
         0 0 25px rgba(83, 141, 78, 0.4);
 }
 
-/* Date */
+
+/* ========================================
+   DATE
+   ======================================== */
+
 #date {
-    margin-top: 15px;
-    font-size: 18px;
+    margin-top: 20px;
+
+    font-size: 19px;
+    letter-spacing: 3px;
+
     color: #aaaaaa;
-    letter-spacing: 2px;
 }
 
-/* Phone layout */
+
+/* ========================================
+   MOBILE
+   0 - 597px
+   ======================================== */
+
 @media (max-width: 597px) {
 
     .clock-container {
         width: 90%;
+        max-width: none;
+
         padding: 30px 20px;
+
         border-radius: 22px;
+
         transform: translateY(-20px);
+    }
+
+    .title {
+        font-size: 13px;
+        letter-spacing: 4px;
+
+        margin-bottom: 15px;
     }
 
     #clock {
@@ -97,16 +141,18 @@ body {
     }
 
     #date {
-        font-size: 14px;
-    }
+        margin-top: 15px;
 
-    .title {
-        font-size: 13px;
-        letter-spacing: 4px;
+        font-size: 14px;
+        letter-spacing: 2px;
     }
 }
 
-/* Very small phones */
+
+/* ========================================
+   VERY SMALL PHONES
+   ======================================== */
+
 @media (max-width: 380px) {
 
     .clock-container {
@@ -121,59 +167,4 @@ body {
         font-size: 13px;
     }
 }
-
-
-/* =========================
-   DESKTOP / WEB VERSION
-   ========================= */
-
-@media (min-width: 598px) {
-
-    body {
-        background:
-            radial-gradient(
-                circle at 50% 45%,
-                #252a30 0%,
-                #14171b 45%,
-                #08090a 100%
-            );
-    }
-
-    .clock-container {
-        width: 700px;
-        max-width: 85%;
-        padding: 55px 50px;
-
-        border-radius: 28px;
-
-        background: rgba(255, 255, 255, 0.06);
-
-        border: 1px solid rgba(255, 255, 255, 0.15);
-
-        box-shadow:
-            0 25px 70px rgba(0, 0, 0, 0.5),
-            0 0 60px rgba(83, 141, 78, 0.15),
-            inset 0 1px 0 rgba(255, 255, 255, 0.08);
-
-        transform: translateY(-10px);
-    }
-
-    .title {
-        font-size: 18px;
-        letter-spacing: 7px;
-        margin-bottom: 20px;
-    }
-
-    #clock {
-        font-size: 82px;
-        letter-spacing: 5px;
-    }
-
-    #date {
-        margin-top: 20px;
-        font-size: 19px;
-        letter-spacing: 3px;
-    }
-}
-
 
