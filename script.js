@@ -42,3 +42,12 @@ updateClock();
 
 // Update every second
 setInterval(updateClock, 1000);
+
+
+if ("serviceWorker" in navigator) {
+    window.addEventListener("load", () => {
+        navigator.serviceWorker.register("./service-worker.js")
+            .then(() => console.log("Service worker registerted"))
+            .catch(error => console.error("Service worker failed:", error));
+    });
+}
