@@ -1,4 +1,4 @@
-const CACHE_NAME = "live-clock-v4";
+const CACHE_NAME = "live-clock-v5";
 
 const FILES_TO_CACHE = [
     "./",
@@ -6,6 +6,8 @@ const FILES_TO_CACHE = [
     "./style.css",
     "./script.js",
     "./manifest.json",
+    "./stopwatch.html",
+    "./stopwatch.js",
     "./icons/icon-192.png",
     "./icons/icon-512.png"
 ];
