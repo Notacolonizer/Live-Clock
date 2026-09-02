@@ -123,4 +123,57 @@ body {
 }
 
 
+/* =========================
+   DESKTOP / WEB VERSION
+   ========================= */
+
+@media (min-width: 601px) {
+
+    body {
+        background:
+            radial-gradient(
+                circle at 50% 45%,
+                #252a30 0%,
+                #14171b 45%,
+                #08090a 100%
+            );
+    }
+
+    .clock-container {
+        width: 700px;
+        max-width: 85%;
+        padding: 55px 50px;
+
+        border-radius: 28px;
+
+        background: rgba(255, 255, 255, 0.06);
+
+        border: 1px solid rgba(255, 255, 255, 0.15);
+
+        box-shadow:
+            0 25px 70px rgba(0, 0, 0, 0.5),
+            0 0 60px rgba(83, 141, 78, 0.15),
+            inset 0 1px 0 rgba(255, 255, 255, 0.08);
+
+        transform: translateY(-10px);
+    }
+
+    .title {
+        font-size: 18px;
+        letter-spacing: 7px;
+        margin-bottom: 20px;
+    }
+
+    #clock {
+        font-size: 82px;
+        letter-spacing: 5px;
+    }
+
+    #date {
+        margin-top: 20px;
+        font-size: 19px;
+        letter-spacing: 3px;
+    }
+}
+
 
